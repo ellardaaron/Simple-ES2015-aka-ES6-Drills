@@ -40,14 +40,36 @@ getFirstName('Katherine Hotch');
 
 let getFirstNameConcise = (fullName) => console.log(fullName.split(' ')[0]);
 
-getFirstNameConcise('Aaron Ellard')
+getFirstNameConcise('Aaron Ellard');
 getFirstNameConcise('Katherine Hotch');
 
 function newFunction (x, y) {
-    // return (`${x} ${y}`);
     let XToThePowerOfY = x^y;
-   
     let productOfXAndY = x+y;
-}
+    console.log(`${XToThePowerOfY},${productOfXAndY}`);
+};
 
 newFunction(2,3);
+
+//Spread Syntax
+
+function favoriteFoodPoll (name, location, favFood) {
+    console.log(`${name} ${location} ${favFood}`);
+};
+
+let ryan = ['Ryan', 'Birmingham', 'Spicy Noodles'];
+
+console.log(favoriteFoodPoll(...ryan));
+
+// var yourName;
+
+function thatTakesAParameter (whatEverYouLike) {
+    let spreadIntoAnArray = [...whatEverYouLike];
+    console.log(spreadIntoAnArray);
+
+    for (var i = 0; i < spreadIntoAnArray.length; i++) {
+        console.log(spreadIntoAnArray[i]);
+      };
+};
+
+thatTakesAParameter ('Aaron');
